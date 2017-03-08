@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- CSRF Token -->
+   <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
@@ -21,7 +22,7 @@
     </script>
 </head>
 <body>
-    <div id="app">
+   {{--<div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -77,9 +78,9 @@
                 </div>
             </div>
         </nav>
-
+   </div>--}}
         @yield('content')
-    </div>
+
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>

@@ -22,12 +22,26 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 
+
 Route::resource('/posts', 'PostController');
 
+Route::get('/about', function() {
 
-/**
+    return view('pages.about');
+});
 
-Route::get('home', function() {
+/*Route::get('/portfolio', function() {
+
+    return view('pages.portfolio');
+});*/
+
+
+
+
+
+
+
+/*Route::get('home', function() {
     
     return view('pages.home');
 });
@@ -38,10 +52,10 @@ Route::get('about', function() {
 Route::get('projects', function() {
    
     return view('pages.projects');
-});
+});*/
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index');
 
-**/
+
+
+

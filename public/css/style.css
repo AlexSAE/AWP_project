@@ -21,19 +21,22 @@ Header
 {
 	padding: 40px 0px;
 }
-.main-navigation
-{
-    border-bottom: 1px solid #eee;
+
+
+#main{
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color: ghostwhite;
 }
 .navbar-default {
-    background-color: #fff;
+    background-color: transparent;
     border-color: rgba(231, 231, 231, 0.33);
-    padding: 20px 0px;
+    /*padding: 20px 0px;*/
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
     color: #354242;
-    background-color: #fff;
+    background-color: #ffffff;
 }
 .navbar-nav {
     padding-top: 5px;
@@ -87,7 +90,7 @@ Header
     padding: 0px;
     letter-spacing: 6px;
     font-size: 15px;
-    color: #fff;
+   color: #fff;
     text-transform: uppercase;
     font-weight: 400;
     color: #ffffff;
@@ -146,7 +149,7 @@ a.btn-banner:hover, a.btn-banner:focus
     font-weight: 400;
     color: #ffffff;
     -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
-    -moz-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
+   /* -moz-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));*/
     -ms-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
 }
@@ -404,7 +407,7 @@ margin-top: 5px;
     transition: all 0.5s ease 0s;
 }
 .footer {
-    background-color: #040E18;
+    background-color: blue;
 }
 .footer h3 {
     color: #fff;
@@ -434,7 +437,7 @@ margin-top: 5px;
     width: 40px;
 }
 .footer-bottom {
-    background: #09121B;
+    background: gray;
     padding: 20px 0;
 }
 .footer_copyright {
@@ -658,3 +661,8 @@ span.tags {
     margin-left: -10px;
     z-index: 10;
 }
+
+/**about**/
+
+
+

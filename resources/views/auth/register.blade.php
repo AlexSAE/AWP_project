@@ -21,7 +21,7 @@
 <!-- main -->
 
     <div class="center-container">
-        {{--<div class="w3ls-header">--}}
+        <div class="w3ls-header">
             <div class="header-main">
                 <h1>Register</h1>
                 <div class="header-bottom">
@@ -35,8 +35,8 @@
                                 </div>
                                 @if ($errors->has('name'))
                                     <span class="help-block">
-                                    <strong>{{ $errors->first('name') }}</strong>
-                                </span>
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
                                 @endif
                                 <div class="icon1">
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -44,8 +44,8 @@
                                 </div>
                                 @if ($errors->has('email'))
                                     <span class="help-block">
-                                    <strong>{{ $errors->first('email') }}</strong>
-                                </span>
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
                                 @endif
                                 <div class="icon1">
                                     <i class="fa fa-lock" aria-hidden="true"></i>
@@ -53,8 +53,8 @@
                                 </div>
                                 @if ($errors->has('password'))
                                     <span class="help-block">
-                                    <strong>{{ $errors->first('password') }}</strong>
-                                </span>
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
                                 @endif
                                 <div class="icon1">
                                     <i class="fa fa-lock" aria-hidden="true"></i>
@@ -72,8 +72,8 @@
                                 @endif
                                 @if ($errors->has('type'))
                                     <span class="help-block">
-                                    <strong>{{ $errors->first('type') }}</strong>
-                                </span>
+                                        <strong>{{ $errors->first('type') }}</strong>
+                                    </span>
                                 @endif
                                 <div class="bottom">
                                     <input type="submit" value="Sign Up" />

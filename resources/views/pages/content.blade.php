@@ -41,5 +41,5 @@
 		        </div>
 		    </div>
 		</div>
-	
-	@end section
+
+	@endsection

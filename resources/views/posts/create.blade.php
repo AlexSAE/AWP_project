@@ -1,11 +1,12 @@
 <head>
-    <link rel="stylesheet" href="css/create.css" type="text/css" media="all" /> <!-- Style-CSS -->
+    <link rel="stylesheet" href="css/index.css" type="text/css" media="all" /> <!-- Style-CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"></head>
 <br />
 <div class="inner contact"><!-- Form Area -->
     <div class="contact-form">
         <!-- Form -->
         <form  method="post" action="/posts">
+            {{csrf_field()}}
             <div class="col-xs-6 wow animated slideInLeft" data-wow-delay=".5s"><!-- Left Inputs -->
                 <input type="text" name="name" id="user" required="required" class="form" placeholder="Name" /><!-- Name -->
 
