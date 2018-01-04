@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\profile;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -28,7 +29,7 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
-
+    
     /**
      * Create a new controller instance.
      *
@@ -52,7 +53,7 @@ class RegisterController extends Controller
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
             'languages' => 'string',
-            'type' => 'required|in:translator,publisher',
+            'type' => 'required|in:Translator,Employers',
         ]);
     }
 
@@ -62,14 +63,29 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function create(array $data)
+    protected function create()
     {
-        return User::create([
+
+        $data = request(['name', 'email', 'password', 'type_id']);
+        $pic_path = 'user.png';
+        // dd($data);
+        $user = User::create([
             'name' => $data['name'],
+            'pic'=> $pic_path,
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
             'languages' => @$data['languages'],
-            'type' => $data['type'],
+            'type_id' => $data['type_id'],
         ]);
+
+
+        Profile::create(['user_id' => $user->id]);
+        return $user;
+       
+    }
+
+   public function user()
+    {
+        return $this->belongsTo('App\User');
     }
 }

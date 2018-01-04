@@ -18,8 +18,14 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::get();
 
+        
+        // public function index(){
+        //   $posts = DB::table('posts')->get();
+        //   return view('posts',compact('posts'));
+        // }
+
+        $posts = Post::all();
         return view('posts.index', ['posts' => $posts]);
     }
 
@@ -59,7 +65,8 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('posts.show', ['post'=>$post]);
+        return view('posts.balde', ['post'=>$post]);
+        // return view('posts.show', ['post'=>$post]);
     }
 
     /**
@@ -68,10 +75,10 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(EditPost $request, Post $post)
-    {
-        return view('posts.edit', ['post'=>$post]);
-    }
+    // public function edit(EditPost $request, Post $post)
+    // {
+    //     return view('posts.edit', ['post'=>$post]);
+    // }
 
     /**
      * Update the specified resource in storage.
@@ -80,18 +87,18 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePost $request, Post $post)
-    {
-        $data = [
-            'title'=>$request->get('title'),
-            'languages'=>$request->get('languages'),
-            'description'=>$request->get('description'),
-        ];
+    // public function update(UpdatePost $request, Post $post)
+    // {
+    //     $data = [
+    //         'title'=>$request->get('title'),
+    //         'languages'=>$request->get('languages'),
+    //         'description'=>$request->get('description'),
+    //     ];
 
-        $post->update($data);
+    //     $post->update($data);
 
-        return view('/posts/'.$post->id);
-    }
+    //     return view('/posts/'.$post->id);
+    // }
 
     /**
      * Remove the specified resource from storage.
@@ -99,10 +106,10 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(EditPost $request, Post $post)
-    {
-        $post->delete();
+    // public function destroy(EditPost $request, Post $post)
+    // {
+    //     $post->delete();
 
-        return view('/posts');
-    }
+    //     return view('/posts');
+    // }
 }

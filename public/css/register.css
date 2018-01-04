@@ -23,17 +23,16 @@ img{max-width:100%;}
 /*end reset*/
 
 body{
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+    background-size: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background: #005cae url(../img/banner-bg.jpg) no-repeat fixed center 0px;
+    background: #005cae url(../img/banner-bg.jpg) no-repeat center 0px;
     padding:0;
     margin:0;
     font-family: 'Open Sans', sans-serif;
     font-size: 100%;
+
 }
 @font-face {
     font-family: 'Open Sans', sans-serif;
@@ -85,14 +84,14 @@ a {
     color: #FFFFFF;
     margin: .1em;
 }
-.f {
+/*.f {
     background: #3b5998;
     padding: .4em 1.4em;
     border: 2px solid #3b5998;
 }
 .f:hover,.g:hover,.t:hover{
     border:2px solid #FFFFFF;
-}
+}*/
 .t {
     background: #1da1f2;
     padding: .4em 1.4em;
@@ -104,9 +103,9 @@ a {
     border: 2px solid #dd4b39;
 }
 
-.center-container{
+/*.center-container{
     background: url(../img/banner-bg.jpg)no-repeat center 0px;
-}
+}*/
 .bottom {
     margin: 2em 0 0;
     text-align: center;

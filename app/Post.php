@@ -6,17 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    protected $fillable = [
-        'user_id', 'title', 'languages', 'description'
-    ];
-
+	// create relaion users and posts
     public function user()
     {
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
-
-    public function  messages()
-    {
-        $this->hasMany(Message::class);
-    }
+    
 }
+
+
+
+
+
+

@@ -7,17 +7,28 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#banner">Tempo</a>
+                <a class="navbar-brand" href="#banner">TranslateUs</a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a href="#banner">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="/portfolio">Portfolio</a></li>
-                    <li><a href="#">Posts</a></li>
+                    <li><a href="/posts">Posts</a></li>
                     <li><a href="#contact">Messages</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-</div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+    

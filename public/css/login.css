@@ -22,10 +22,8 @@ nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
 img{max-width:100%;}
 /*end reset*/
 body {
-    /* background:url('../images/letter1.jpg') no-repeat 62% 90%; */
     background: url(../img/banner-bg.jpg)no-repeat center 0px;
-    background-color: #005cae;
-    background-size: cover;
+    background-size: 100%;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
 }

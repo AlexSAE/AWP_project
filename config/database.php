@@ -13,7 +13,11 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+
+    'default' => env('DB_CONNECTION', 'sqlite'), 
+                 
+
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -33,6 +37,9 @@ return [
 
     'connections' => [
 
+        'host'=> env('DB_HOST', 'localhost'),
+             
+
         'sqlite' => [
             'driver' => 'sqlite',
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
@@ -45,7 +52,7 @@ return [
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'password' => env('DB_PASSWORD', 'secret'),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
             'prefix' => '',
@@ -65,6 +72,7 @@ return [
             'schema' => 'public',
             'sslmode' => 'prefer',
         ],
+
 
     ],
 
