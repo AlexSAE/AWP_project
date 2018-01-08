@@ -67,7 +67,7 @@ class RegisterController extends Controller
     {
 
         $data = request(['name', 'email', 'password', 'type_id']);
-        $pic_path = 'user.png';
+        $pic_path = 'male.png';
         // dd($data);
         $user = User::create([
             'name' => $data['name'],

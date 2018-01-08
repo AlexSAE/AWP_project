@@ -23,6 +23,13 @@ Auth::routes();
 
       Route::get('/profile', 'ProfileController@index');
 
+       Route::resource('/portfolio', 'PortfolioController');
+
+
+
+
+      
+
 
       Route::get('/Profile/{slug}', 'ProfileController@index');
 

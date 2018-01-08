@@ -43,9 +43,23 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
+                        
+                        <li class="active"><a href="#banner">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    <li><a href="/posts">Posts</a></li>
+                    <li><a href="/translators">Translators</a></li>
+
+
+
+
+
+
+
+
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a  href="{{ route('login') }}">Login</a></li>
+                            <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
@@ -57,7 +71,7 @@
                                    
 
 
-                                    <a href="{{ url('editProfile')}}">Edit Profile</a>
+                                    <a href="{{ url('settings')}}">Edit Profile</a>
 
 
 

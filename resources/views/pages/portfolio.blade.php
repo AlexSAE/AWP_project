@@ -16,18 +16,18 @@ return view('portfolio', compact['portfolio']);
 
 					<div class="col-sm-12">
 						<div class="col-xs-12 col-sm-8">
-							<h2>Nicole Pearson</h2> 
-							<p><strong>About: </strong> Translator </p>
+							<h2>{{ucwords(Auth::user()->name)}}</h2> 
+							<p><strong>About: </strong> {{ucwords(Auth::user()->type_id)}} </p>
 							<p><strong>Skils: </strong> Read, out with friends, listen to music, draw and learn new things. </p>
 							<p><strong>Laguages: </strong>
-								<span class="tags">English</span>
+								<span class="tags">{{ucwords(Auth::user()->languages)}}</span>
 								<span class="tags">Italian</span>
 
 							</p>
 						</div>
 						<div class="col-xs-12 col-sm-4 text-center">
 							<figure>
-								<img src="../img/agent1.jpg" alt="" class="img-circle img-responsive">
+								<img src="{{url('../')}}/public/img/{{(Auth::user()->pic)}}" width="120px" height="120px" class="img-circle">
 								<figcaption class="ratings">
 									<p>Ratings
 									<a href="#">
