@@ -4,6 +4,7 @@
     
 
 @section('content')
+na profilu sam!
 
 
 <!-- @foreach ($users as $user)

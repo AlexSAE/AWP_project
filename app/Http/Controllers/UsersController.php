@@ -48,6 +48,24 @@ class UsersController extends Controller
                 ->withInput()
                 ->withErrors($Validator->messages());
         }
+
+        User::create
+
+
     }
+
+    public function show($id)
+    {
+        $user = User::find($id);
+
+        if ($user == null) return Redirect::to('users');
+
+        return View::make('profile.index')->withUser($user);
+    }
+
+    // public function index()
+    // {
+    //     return View::make('home');
+    // }
    
 }

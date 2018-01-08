@@ -4,8 +4,10 @@
 
 return view('portfolio', compact['portfolio']);
 
-@section('content')
 
+
+
+@section('content')
 
 
 	<div class="container">
@@ -14,7 +16,7 @@ return view('portfolio', compact['portfolio']);
 
 					<div class="col-sm-12">
 						<div class="col-xs-12 col-sm-8">
-							<h2>Nicole Pearson</h2>
+							<h2>Nicole Pearson</h2> 
 							<p><strong>About: </strong> Translator </p>
 							<p><strong>Skils: </strong> Read, out with friends, listen to music, draw and learn new things. </p>
 							<p><strong>Laguages: </strong>

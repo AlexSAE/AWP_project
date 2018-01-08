@@ -24,3 +24,6 @@ class RedirectIfAuthenticated
         return $next($request);
     }
 }
+
+
+// evo tu bi trebo tu proveru da napravis, bar ja mislim..

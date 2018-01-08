@@ -19,6 +19,8 @@ Auth::routes();
 
       Route::resource('/posts', 'PostController');
 
+      Route::resource('/profile', 'ProfileController');
+
       Route::get('/profile', 'ProfileController@index');
 
 
@@ -46,7 +48,7 @@ Auth::routes();
 
 
 
-
+      
 
 
       Route::get('/about', function() {
