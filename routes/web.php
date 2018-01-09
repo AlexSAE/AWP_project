@@ -11,7 +11,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
       
       Route::get('/home', 'HomeController@index');
 
@@ -22,13 +21,6 @@ Auth::routes();
       Route::resource('/profile', 'ProfileController');
 
       Route::get('/profile', 'ProfileController@index');
-
-       Route::resource('/portfolio', 'PortfolioController');
-
-
-
-
-      
 
 
       Route::get('/Profile/{slug}', 'ProfileController@index');
@@ -63,10 +55,6 @@ Auth::routes();
           return view('pages.about');
       });
 
-      Route::get('/portfolio', function() {
-
-          return view('pages.portfolio');
-      });
 
       Route::post('/contact', 'UsersController@contactUser');
 
@@ -109,9 +97,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('register', 'Auth\RegisterController@create');
 
-Route::get('portfolio', function() {
+Route::get('portfolio', 'PortfolioController@index');
 
-    return view('pages.portfolio');
-});
+Route::get('portfolio/{id}', 'PortfolioController@show');
 
+Route::get('editprofile/{id}', 'PortfolioController@editProfileForm');
 
+Route::post('editprofile', 'PortfolioController@updateProfile');
+
+Route::post('createpost', 'PostsController@store');

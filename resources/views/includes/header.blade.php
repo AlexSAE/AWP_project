@@ -15,7 +15,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="/portfolio">Portfolio</a></li>
                     <li><a href="/posts">Posts</a></li>
-                    <li><a href="/translators">Translators</a></li>
+                    <li><a href="#contact">Messages</a></li>
                 </ul>
             </div>
         </div>
@@ -31,4 +31,4 @@
 
 
 
- 
+    

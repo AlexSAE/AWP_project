@@ -49,7 +49,7 @@ class UsersController extends Controller
                 ->withErrors($Validator->messages());
         }
 
-        User::create;
+        User::create
 
 
     }
@@ -60,7 +60,7 @@ class UsersController extends Controller
 
         if ($user == null) return Redirect::to('users');
 
-        return View::make('home')->withUser($user);
+        return View::make('profile.index')->withUser($user);
     }
 
     // public function index()

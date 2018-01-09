@@ -14,10 +14,7 @@ class CreatePost extends FormRequest
      */
     public function authorize()
     {
-        if(Auth::user()->type == 'publisher')
-            return true;
-
-        return false;
+        return true;
     }
 
     /**
