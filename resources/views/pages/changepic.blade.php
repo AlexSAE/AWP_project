@@ -10,16 +10,8 @@
             <div class="panel-body">
                 <h3 class="panel-title pull-left">Edit profile</h3>
                 <br><br>
-                <form class="form-horizontal" action="/editprofile" method="POST" enctype="multipart/form-data">
+                <form class="form-horizontal" action="/editprofile" method="POST">
                     {{ csrf_field() }}
-                    <label for="pic">Profile picture</label>
-                    @if (empty($user->pic))
-                        <b>No profile picture selected</b>
-                    @else
-                        <img src="{{$user->pic}}">
-                    @endif
-                    <input type="file" required class="form-control" name="pic" id="pic" value="">
-                    <br/>
                     <label for="name">Name</label>
                     <input type="text" required class="form-control" name="name" id="name" value="{{ $user->name }}">
                     <br/>

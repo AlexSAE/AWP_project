@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <head>
     <link rel="stylesheet" href="css/index.css" type="text/css" media="all" /> <!-- Style-CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"></head>

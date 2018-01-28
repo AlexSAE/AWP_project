@@ -16,7 +16,7 @@ Auth::routes();
 
       Route::resource('/users', 'UsersController');
 
-      Route::resource('/posts', 'PostController');
+      Route::resource('/posts', 'PostsController');
 
       Route::resource('/profile', 'ProfileController');
 
@@ -47,7 +47,11 @@ Auth::routes();
 
 
 
-      
+      // THREADS AND MESSAGES
+
+      Route::resource('/threads', 'ThreadController');
+      Route::get('/threads/create/{user_id}', 'ThreadController@create');
+
 
 
       Route::get('/about', function() {

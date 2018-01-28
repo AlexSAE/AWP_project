@@ -7,15 +7,25 @@ use Illuminate\Database\Eloquent\Model;
 class Message extends Model
 {
     protected $fillable = [
-        'user_id', 'post_id', 'text',
+        'thread_id', 'user_id', 'text',
     ];
 
     public function user()
     {
         $this->belongsTo(User::class);
     }
-    public function post()
+
+    // TODO: mozes a nem moras da napravis thread relaciju... msm da ti nije potrebna
+
+    public function thread() 
     {
-        $this->belongsTo(Post::class);
-    }
+        return $this->belongsTo(Thread::class);
+     }
+
+    // TODO: Edituj migraciju!! - napisao sam ti gore i fillable sta treba da se doda
+
+    // public function post()
+    // {
+    //     $this->belongsTo(Post::class);
+    // }
 }

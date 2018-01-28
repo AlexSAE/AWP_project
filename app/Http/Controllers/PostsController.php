@@ -41,7 +41,7 @@ class PostsController extends Controller
     {
         Post::create([
             'user_id'     => Auth::user()->id,
-            'title'       => $request->get('title'),
+            'title'       =>$request->get('title'),
             'languages'   =>$request->get('languages'),
             'description' =>$request->get('description'),
         ]);

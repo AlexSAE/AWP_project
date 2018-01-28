@@ -15,8 +15,11 @@ class CreateThreadsTable extends Migration
     {
         Schema::create('threads', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('client_id')->unsinged();
+            $table->integer('thread_id')->unsinged();
             $table->integer('user_id')->unsinged();
+            $table->foreign('sender_id')->references('id')->on('users');
+            $table->foreign('receiver_id')->references('id')->on('users');
+            $table->string('text');
             $table->timestamps();
         });
     }

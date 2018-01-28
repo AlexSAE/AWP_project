@@ -72,6 +72,13 @@ class PortfolioController extends Controller
              exit('Invalid user.');
          }
 
+         if (empty($request->file('pic'))) {
+            $user->pic = "";
+         } else {
+            $result = \Storage::disk('local')->put('img', $request->file('pic'));
+            $user->pic = '/' . $result;
+         }
+
          $user->name = $request->name;
          $user->about = $request->about;
          $user->languages = $request->langs;
